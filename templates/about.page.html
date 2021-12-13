@@ -1,0 +1,19 @@
+{{template "base" .}}
+{{define "content"}}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>About page</h1>
+                <p>This is the random about text</p>
+                <p>{{index .StringData "headerSubText"}}</p>
+                <p>
+                    {{if ne (index .StringData "ip_address") ""}}
+                        Your remote IP address is {{index .StringData "ip_address"}}
+                    {{else}}
+                        I don't know your remote IP Address yet. Please visit <a href="/">Home page</a> to set it
+                    {{end}}
+                </p>
+            </div>
+        </div>
+    </div>
+{{end}}
