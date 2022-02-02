@@ -17,6 +17,12 @@ func routes(app *config.AppConfig) http.Handler {
 	mux.Use(LoadSession)
 	mux.Get("/", handlers.Repository.Home)
 	mux.Get("/about", handlers.Repository.About)
+	mux.Get("/rooms/generals-quarters", handlers.Repository.GeneralsQuarters)
+	mux.Get("/rooms/admirals-abode", handlers.Repository.AdmiralsAbode)
+	mux.Get("/rooms/colonels-batcave", handlers.Repository.ColonelsBatcave)
+	mux.Get("/make-reservation", handlers.Repository.MakeReservation)
+	mux.Get("/contact", handlers.Repository.Contact)
+	mux.Get("/search-availability", handlers.Repository.SearchAvailability)
 
 	fileServer := http.FileServer(http.Dir("./static/"))
 	mux.Handle("/static/*", http.StripPrefix("/static/", fileServer))

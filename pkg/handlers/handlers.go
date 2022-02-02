@@ -44,3 +44,22 @@ func (repoLocal *RepositoryPattern) About(rw http.ResponseWriter, r *http.Reques
 
 	render.RenderTemplate(rw, "about.page.html", &models.TemplateData{StringData: stringMap})
 }
+
+func (repoLocal *RepositoryPattern) AdmiralsAbode(rw http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(rw, "admirals.abode.page.html", &models.TemplateData{})
+}
+func (repoLocal *RepositoryPattern) GeneralsQuarters(rw http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(rw, "generals.quarters.page.html", &models.TemplateData{})
+}
+func (repoLocal *RepositoryPattern) ColonelsBatcave(rw http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(rw, "colonels.batcave.page.html", &models.TemplateData{})
+}
+func (repoLocal *RepositoryPattern) Contact(rw http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(rw, "contact.page.html", &models.TemplateData{})
+}
+func (repoLocal *RepositoryPattern) MakeReservation(rw http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(rw, "make.reservation.page.html", &models.TemplateData{})
+}
+func (repoLocal *RepositoryPattern) SearchAvailability(rw http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(rw, "search.availability.page.html", &models.TemplateData{})
+}

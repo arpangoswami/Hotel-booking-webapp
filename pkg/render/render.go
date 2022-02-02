@@ -53,6 +53,7 @@ func RenderTemplate(rw http.ResponseWriter, templateTitle string, templateData *
 func CreateTemplateCache() (map[string]*template.Template, error) {
 	myCache := map[string]*template.Template{}
 	pages, err := filepath.Glob("./templates/*.page.html")
+	fmt.Println(pages)
 	if err != nil {
 		return myCache, err
 	}
